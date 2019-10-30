@@ -32,9 +32,9 @@
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul> 
                 <span class="navbar-text ml-auto">
-                    <a data-toggle="modal" data-target="#loginModal" id="login">
+                    <a id="login">
                     <span class="fa fa-sign-in"></span> Login</a>
-                </span>   
+                </span>  
             </div>         
         </div>
     </nav>
@@ -64,7 +64,7 @@
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancel</button>
                     <button type="submit" class="btn btn-primary btn-sm">Sign in</button>
                 </div>
             </div>
@@ -82,7 +82,7 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm align-self-center">
-                    <a role="button" class="btn btn-block btn-sm btn-warning" data-toggle="modal" data-target="#reservationFormModal" role="button">Reserve Table</a>
+                    <a role="button" class="btn btn-block btn-sm btn-warning" id="reserveTable" role="button">Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -221,25 +221,40 @@
                                 <div class="form-group row">
                                     <label for="firstname" class="col-md-2 col-form-label">Number of Guests</label>
                                     <div class="col-md-10">
-                                        <div class="btn-group" data-toggle="buttons">
-                                            <label class="btn active">
-                                                <input type="radio" name="nbPeople" value="1" autocomplete="off"> 1
-                                            </label>
-                                            <label class="btn">
-                                                <input type="radio" name="nbPeople" value="2" autocomplete="off"> 2
-                                            </label>
-                                            <label class="btn">
-                                                <input type="radio" name="nbPeople" value="3" autocomplete="off"> 3
-                                            </label>
-                                            <label class="btn">
-                                                <input type="radio" name="nbPeople" value="4" autocomplete="off"> 4
-                                            </label>
-                                            <label class="btn">
-                                                <input type="radio" name="nbPeople" value="5" autocomplete="off"> 5
-                                            </label>
-                                            <label class="btn">
-                                                <input type="radio" name="nbPeople" value="6" autocomplete="off"> 6
-                                            </label>
+                                        <!-- Default inline 1-->
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" class="custom-control-input" id="defaultInline1" name="inlineDefaultRadiosExample">
+                                            <label class="custom-control-label" for="defaultInline1">1</label>
+                                        </div>
+                                        
+                                        <!-- Default inline 2-->
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" class="custom-control-input" id="defaultInline2" name="inlineDefaultRadiosExample">
+                                            <label class="custom-control-label" for="defaultInline2">2</label>
+                                        </div>
+                                        
+                                        <!-- Default inline 3-->
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" class="custom-control-input" id="defaultInline3" name="inlineDefaultRadiosExample">
+                                            <label class="custom-control-label" for="defaultInline3">3</label>
+                                        </div>
+
+                                        <!-- Default inline 4-->
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" class="custom-control-input" id="defaultInline4" name="inlineDefaultRadiosExample">
+                                            <label class="custom-control-label" for="defaultInline4">4</label>
+                                        </div>
+                                        
+                                        <!-- Default inline 5-->
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" class="custom-control-input" id="defaultInline5" name="inlineDefaultRadiosExample">
+                                            <label class="custom-control-label" for="defaultInline5">5</label>
+                                        </div>
+                                        
+                                        <!-- Default inline 6-->
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" class="custom-control-input" id="defaultInline6" name="inlineDefaultRadiosExample">
+                                            <label class="custom-control-label" for="defaultInline6">6</label>
                                         </div>
                                     </div>
                                 </div>
@@ -247,12 +262,12 @@
                                     <label for="section" class="col-md-2 col-form-label">Section</label>
                                     <div class="col-md-4">
                                         <div class="btn-group" data-toggle="buttons">
-                                          <label class="btn btn-success active">
-                                            <input type="radio" name="section" value="nonsmoking" autocomplete="off" checked> Non-Smoking
-                                          </label>
-                                          <label class="btn btn-danger">
-                                            <input type="radio" name="section" value="smoking" autocomplete="off"> Smoking
-                                          </label>
+                                          
+                                            <input class="btn btn-success active" type="button" name="section" value="Non-Smoking" checked>
+                                          
+                                          
+                                            <input class="btn btn-danger" type="button" name="section" value="Smoking">
+                                         
                                         </div>
                                     </div>
                                 </div>
@@ -260,18 +275,18 @@
                                     <label for="lastname" class="col-md-2 col-form-label">Date and Time</label>
                                     <div class="col-md-4">
                                         <div class="input-group">
-                                            <input class="form-control" type="date" name="dateBooking" value="" placeholder="Date">
+                                            <input class="form-control" type="text" name="dateBooking" value="" placeholder="Date">
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="input-group">
-                                            <input class="form-control" type="hour" name="hourBooking" value="" placeholder="Time">
+                                            <input class="form-control" type="text" name="hourBooking" value="" placeholder="Time">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="offset-md-2 col-md-10">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                                         <button type="submit" class="btn btn-primary">Reserve</button>
                                     </div>
                                 </div>
@@ -341,6 +356,12 @@
                         $('#carouselButton').children('span').removeClass('fa-play');
                         $('#carouselButton').children('span').addClass('fa-pause');
                     }
+                });
+                $('#login').click(function(){
+                    $('#loginModal').modal();
+                });
+                $('#reserveTable').click(function(){
+                    $('#reservationFormModal').modal();
                 });
             });
         </script>

@@ -49,6 +49,7 @@ body{
     background-color: white;
 }
 
+
 .navbar-dark {
      background-color: $background-dark;
 }
@@ -81,4 +82,22 @@ body{
     position: absolute;
     bottom: 0px;
     z-index: 1;
+}
+
+
+
+.modal-content{
+    background: $background-pale;
+    border-bottom: none;
+    .modal-header {
+        background: $background-dark;
+        color: floralwhite;
+        .close {
+            color: floralwhite;
+        }
+    }
+    .modal-footer {
+        border-top: none;
+    }
+
 }
